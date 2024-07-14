@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d226d977-0f68-44ed-9464-67a10932b424" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package-info" />
+        <option value="JUnit5 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2hs8ZH1SP3tHz8W7dS22nygbLC1" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-21&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/yaser/Desktop/gob-mvn&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;fa294e68b4e4e3583e75eba8ccedb563&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\yaser\Desktop\gob-mvn\gob\src\main\java\com\kq\gob" />
+      <recent name="C:\Users\yaser\Desktop\gob-mvn\src\main\java\com\kq\gob" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.kq.gob.Gob" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.GobWebApplication">
+    <configuration name="GenerateAst" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.kq.gob.tools.GenerateAst" />
+      <module name="gob" />
+      <option name="PROGRAM_PARAMETERS" value="C:\\Users\\yaser\\Desktop\\gob-mvn\\gob\\src\\main\\java\\com\\kq\\gob\\Gob" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kq.gob.tools.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gob" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kq.gob.Gob.integrationtests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.kq.gob.Gob.integrationtests" />
+      <option name="MAIN_CLASS_NAME" value="com.kq.gob.Gob.integrationtests.IntegrationTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InterpreterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gob" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kq.gob.Gob.unittests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.kq.gob.Gob.unittests" />
+      <option name="MAIN_CLASS_NAME" value="com.kq.gob.Gob.unittests.InterpreterTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InterpreterTest.testFunctionCall" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gob" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kq.gob.Gob.unittests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.kq.gob.Gob.unittests" />
+      <option name="MAIN_CLASS_NAME" value="com.kq.gob.Gob.unittests.InterpreterTest" />
+      <option name="METHOD_NAME" value="testFunctionCall" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ScannerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gob" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kq.gob.Gob.unittests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.kq.gob.Gob.unittests" />
+      <option name="MAIN_CLASS_NAME" value="com.kq.gob.Gob.unittests.ScannerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GobWebApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="gob-web" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kq.gobweb.GobWebApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.GenerateAst" />
+      <item itemvalue="JUnit.IntegrationTest" />
+      <item itemvalue="JUnit.InterpreterTest" />
+      <item itemvalue="JUnit.InterpreterTest.testFunctionCall" />
+      <item itemvalue="JUnit.ScannerTest" />
+      <item itemvalue="Spring Boot.GobWebApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.InterpreterTest" />
+        <item itemvalue="JUnit.IntegrationTest" />
+        <item itemvalue="JUnit.InterpreterTest.testFunctionCall" />
+        <item itemvalue="Application.GenerateAst" />
+        <item itemvalue="JUnit.ScannerTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d226d977-0f68-44ed-9464-67a10932b424" name="Changes" comment="" />
+      <created>1718371518822</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1718371518822</updated>
+      <workItem from="1718371520917" duration="2037000" />
+      <workItem from="1718468834795" duration="12301000" />
+      <workItem from="1718522248916" duration="121000" />
+      <workItem from="1718522391951" duration="5727000" />
+      <workItem from="1718531804415" duration="3391000" />
+      <workItem from="1718559226517" duration="1819000" />
+      <workItem from="1718616175597" duration="4008000" />
+      <workItem from="1718620747532" duration="1058000" />
+      <workItem from="1718725335886" duration="5033000" />
+      <workItem from="1718917287166" duration="772000" />
+      <workItem from="1719498050784" duration="29000" />
+      <workItem from="1719498772040" duration="327000" />
+      <workItem from="1719860781597" duration="16487000" />
+      <workItem from="1720364491886" duration="1830000" />
+      <workItem from="1720417434884" duration="1341000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/gob/src/main/java/com/kq/gob/Gob/Expr.java</url>
+          <line>6</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
