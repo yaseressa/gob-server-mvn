@@ -148,7 +148,7 @@ public class Parser {
             value = expression();
         }
         consume(SEMICOLON, "La Filayey ';' Qiimo Kadib.");
-        return new Stmt.Print(value);
+        return new Stmt.PrintLN(value);
     }
     private Expr lengthStatement() {
         Expr value ;

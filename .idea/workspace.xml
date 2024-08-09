@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d226d977-0f68-44ed-9464-67a10932b424" name="Changes" comment="" />
+    <list default="true" id="d226d977-0f68-44ed-9464-67a10932b424" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gob-web/src/main/java/com/kq/gobweb/GobWebController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gob-web/src/main/java/com/kq/gobweb/GobWebController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gob-web/src/main/resources/banner.txt" beforeDir="false" afterPath="$PROJECT_DIR$/gob-web/src/main/resources/banner.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gob/src/main/java/com/kq/gob/Gob/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/gob/src/main/java/com/kq/gob/Gob/Parser.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,6 +24,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
@@ -38,8 +47,9 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-21&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/yaser/Desktop/gob-mvn&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/yaser/OneDrive/Documents/GOB-1.0&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -48,6 +58,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.appearance&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;fa294e68b4e4e3583e75eba8ccedb563&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -65,20 +76,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.GobWebApplication">
-    <configuration name="GenerateAst" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.kq.gob.tools.GenerateAst" />
-      <module name="gob" />
-      <option name="PROGRAM_PARAMETERS" value="C:\\Users\\yaser\\Desktop\\gob-mvn\\gob\\src\\main\\java\\com\\kq\\gob\\Gob" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.kq.gob.tools.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="IntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="gob" />
       <extension name="coverage">
@@ -94,38 +91,39 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InterpreterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="IntegrationTest.testArithmeticOperations" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="gob" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.kq.gob.Gob.unittests.*" />
+          <option name="PATTERN" value="com.kq.gob.Gob.integrationtests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.kq.gob.Gob.unittests" />
-      <option name="MAIN_CLASS_NAME" value="com.kq.gob.Gob.unittests.InterpreterTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="InterpreterTest.testFunctionCall" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="gob" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.kq.gob.Gob.unittests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.kq.gob.Gob.unittests" />
-      <option name="MAIN_CLASS_NAME" value="com.kq.gob.Gob.unittests.InterpreterTest" />
-      <option name="METHOD_NAME" value="testFunctionCall" />
+      <option name="PACKAGE_NAME" value="com.kq.gob.Gob.integrationtests" />
+      <option name="MAIN_CLASS_NAME" value="com.kq.gob.Gob.integrationtests.IntegrationTest" />
+      <option name="METHOD_NAME" value="testArithmeticOperations" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ScannerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="IntegrationTest.testVariableAssignments" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gob" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kq.gob.Gob.integrationtests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.kq.gob.Gob.integrationtests" />
+      <option name="MAIN_CLASS_NAME" value="com.kq.gob.Gob.integrationtests.IntegrationTest" />
+      <option name="METHOD_NAME" value="testVariableAssignments" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ParserTest.testFunctionDeclaration" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="gob" />
       <extension name="coverage">
         <pattern>
@@ -134,8 +132,25 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.kq.gob.Gob.unittests" />
-      <option name="MAIN_CLASS_NAME" value="com.kq.gob.Gob.unittests.ScannerTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="com.kq.gob.Gob.unittests.ParserTest" />
+      <option name="METHOD_NAME" value="testFunctionDeclaration" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ParserTest.testPrint" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gob" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kq.gob.Gob.unittests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.kq.gob.Gob.unittests" />
+      <option name="MAIN_CLASS_NAME" value="com.kq.gob.Gob.unittests.ParserTest" />
+      <option name="METHOD_NAME" value="testPrint" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -148,20 +163,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.GenerateAst" />
+      <item itemvalue="JUnit.IntegrationTest.testArithmeticOperations" />
+      <item itemvalue="JUnit.IntegrationTest.testVariableAssignments" />
+      <item itemvalue="JUnit.ParserTest.testFunctionDeclaration" />
+      <item itemvalue="JUnit.ParserTest.testPrint" />
       <item itemvalue="JUnit.IntegrationTest" />
-      <item itemvalue="JUnit.InterpreterTest" />
-      <item itemvalue="JUnit.InterpreterTest.testFunctionCall" />
-      <item itemvalue="JUnit.ScannerTest" />
       <item itemvalue="Spring Boot.GobWebApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.InterpreterTest" />
+        <item itemvalue="JUnit.IntegrationTest.testArithmeticOperations" />
         <item itemvalue="JUnit.IntegrationTest" />
-        <item itemvalue="JUnit.InterpreterTest.testFunctionCall" />
-        <item itemvalue="Application.GenerateAst" />
-        <item itemvalue="JUnit.ScannerTest" />
+        <item itemvalue="JUnit.ParserTest.testPrint" />
+        <item itemvalue="JUnit.IntegrationTest.testVariableAssignments" />
+        <item itemvalue="JUnit.ParserTest.testFunctionDeclaration" />
       </list>
     </recent_temporary>
   </component>
@@ -188,6 +203,11 @@
       <workItem from="1719860781597" duration="16487000" />
       <workItem from="1720364491886" duration="1830000" />
       <workItem from="1720417434884" duration="1341000" />
+      <workItem from="1721229219713" duration="4060000" />
+      <workItem from="1721252269776" duration="3382000" />
+      <workItem from="1721376090626" duration="446000" />
+      <workItem from="1721376562965" duration="23000" />
+      <workItem from="1722948145427" duration="1115000" />
     </task>
     <servers />
   </component>
@@ -201,6 +221,12 @@
           <url>file://$PROJECT_DIR$/gob/src/main/java/com/kq/gob/Gob/Expr.java</url>
           <line>6</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/gob/src/test/java/com/kq/gob/Gob/integrationtests/IntegrationTest.java</url>
+          <line>13</line>
+          <properties field="interpreter" class="com.kq.gob.Gob.integrationtests.IntegrationTest" />
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

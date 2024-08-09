@@ -5,5 +5,4 @@
 | \____/| |_| | |_) )  | |___| ( (/ /| |_) )
  \_____/ \___/|____/    \______|\____)____/
 
-${application.title} ${application.version}
 Powered by Spring Boot ${spring-boot.version}

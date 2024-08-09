@@ -13,9 +13,8 @@ import java.util.List;
 public class GobWebController {
     @CrossOrigin
     @PostMapping
-    public ResponseEntity<String> runGob(@RequestBody GobRequest code) {
-        String res = Gob.run(code.code);
-        System.out.println(res);
+    public ResponseEntity<String> runGob(@RequestBody GobRequest gobRequest) {
+        String res = Gob.run(gobRequest.code);
         return new ResponseEntity<>(res, HttpStatus.OK);
 
     }
