@@ -11,6 +11,7 @@
     <modules>
         <module>gob</module>
         <module>gob-web</module>
+        <module>gob-fx</module>
     </modules>
 
     <properties>
