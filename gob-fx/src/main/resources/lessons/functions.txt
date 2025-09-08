@@ -1,0 +1,201 @@
+Qabte iyo Xidhmooyinka
+Barashada qabte iyo xidhmooyinka ee luuqadda barnaamijyada Gob
+
+Qabte ee Gob
+Qabte waa qaybaha koodka ee dib loo isticmaali karo ee loogu talagalay inay fuliyaan hawl gaar ah. Waxay kaa caawiyaan inaad kala qeybiso barnaamijkaaga qaybaha yaryar oo la maarayn karo.
+
+Qeexidda Qabte
+Si aad u qeexdo qabte, waxaad isticmaashaa erayga "qabte" oo la socda magaca qabte iyo liiska parameters-ka (haddii ay jiraan).
+```
+// Qabte fudud oo aan lahayn parameters
+qabte salaanta() {
+  daabac("Soo dhawoow Gob!");
+}
+
+// Qabte leh parameters
+qabte salaantaQofka(magac) {
+  daabac("Soo dhawoow " + magac + "!");
+}
+
+// Qabte leh parameters badan
+qabte isuDar(x, y) {
+  celi x + y;
+}
+
+// Wacidda qabte
+salaanta();
+salaantaQofka("Ahmed");
+door natiijo = isuDar(5, 3);
+daabac("Isugeynta: " + natiijo);
+```
+Natiijooyinka:
+```
+Soo dhawoow Gob!
+Soo dhawoow Ahmed!
+Isugeynta: 8
+```
+
+celinta Qiimayaasha
+Qabte wuxuu celin karaa qiime adoo isticmaalaya bayaanka "celi". Marka qabte uu celiyo qiime, waxaad ku kaydin kartaa doorsoomaha.
+```
+// Qabte xisaabiya celceliska laba nambar
+qabte celcelis(x, y) {
+  door wadarta = x + y;
+  door celceliska = wadarta / 2;
+  celi celceliska;
+}
+
+door natiijo = celcelis(10, 20);
+daabac("Celceliska: " + natiijo);
+```
+Natiijooyinka:
+```
+Celceliska: 15
+```
+
+Parameters iyo Arguments
+Parameters waa doorsoomayaasha ku qeexan qabte. Arguments waa qiimayaasha la siiyo qabte marka la waco.
+```
+// Parameters: a, b, c
+qabte isuDarSaddex(a, b, c) {
+  celi a + b + c;
+}
+
+// Arguments: 10, 20, 30
+door natiijo = isuDarSaddex(10, 20, 30);
+daabac("Isugeynta: " + natiijo);
+```
+Natiijooyinka:
+```
+Isugeynta: 60
+```
+
+Qabte Gudaha
+Waxaad qeexan kartaa qabte gudaha qabte kale. Qabte gudaha wuxuu heli karaa doorsoomayaasha qabte dibadda.
+```
+// Qabte leh qabte gudaha
+qabte xisaabiyaLamafilaan(x) {
+  // Qabte gudaha
+  qabte laba_jibbaar(qiime) {
+    celi qiime * 2;
+  }
+  
+  door natiijo = laba_jibbaar(x);
+  celi natiijo + 10;
+}
+
+door natiijo = xisaabiyaLamafilaan(5);
+daabac("Natiijada: " + natiijo);
+```
+Natiijooyinka:
+```
+Natiijada: 20
+```
+
+Xidhmooyinka
+Xidhmooyinka waa qabte aan magac lahayn oo la isticmaali karo sida qiime. Waxay u fiican yihiin marka aad u baahan tahay inaad marto qabte sida argument.
+```
+// Xidhmo fudud
+door isuDar = qabte(x, y) {
+  celi x + y;
+};
+
+daabac(isuDar(5, 3));  // 8
+
+// Xidhmo sida argument
+qabte fuliyaHawlgal(x, y, hawlgal) {
+  celi hawlgal(x, y);
+}
+
+door natiijo = fuliyaHawlgal(5, 3, isuDar);
+daabac("Natiijada: " + natiijo);  // Natiijada: 8
+
+// Xidhmo toos ah
+door natiijo2 = fuliyaHawlgal(5, 3, qabte(a, b) {
+  celi a * b;
+});
+daabac("Natiijada 2: " + natiijo2);  // Natiijada 2: 15
+```
+
+Xidhidda
+Xidhidda waxay dhacaysaa marka qabte gudaha uu isticmaalo doorsoomayaasha qabte dibadda, xitaa ka dib marka qabte dibadda uu dhammaado. Tani waxay u ogolaataa qabte inuu haysto xaalad.
+```
+// Qabte abuuraya tiriye
+qabte abuurTiriye(bilow) {
+  door qiime = bilow;
+  
+  // Soo celi qabte gudaha
+  celi qabte() {
+    qiime = qiime + 1;
+    celi qiime;
+  };
+}
+
+door tiriye = abuurTiriye(0);
+daabac(tiriye());  // 1
+daabac(tiriye());  // 2
+daabac(tiriye());  // 3
+```
+
+Tusaale Dhamaystiran
+Halkan waxaa ku qoran tusaale dhamaystiran oo isticmaalaya qabte iyo xidhmooyinka:
+```
+// Barnaamij xisaabiya canshuurta iibka
+qabte xisaabiyaCanshuurta(qiime, boqolkiiba) {
+  door canshuurtaBoqolkiiba = boqolkiiba / 100;
+  door canshuurtaQiime = qiime * canshuurtaBoqolkiiba;
+  celi canshuurtaQiime;
+}
+
+qabte xisaabiyaWadarta(qiime, boqolkiibaCanshuurta) {
+  door canshuurtaQiime = xisaabiyaCanshuurta(qiime, boqolkiibaCanshuurta);
+  door wadarta = qiime + canshuurtaQiime;
+  
+  // Soo celi object leh macluumaadka
+  celi {
+    "qiime_asalka": qiime,
+    "canshuurtaQiime": canshuurtaQiime,
+    "wadarta": wadarta
+  };
+}
+
+// Isticmaalka qabte
+door natiijo = xisaabiyaWadarta(100, 15);
+daabac("Qiimaha asalka: $" + natiijo.qiime_asalka);
+daabac("Canshuurta: $" + natiijo.canshuurtaQiime);
+daabac("Wadarta: $" + natiijo.wadarta);
+
+// Isticmaalka xidhmooyinka si loo maro taxane
+door alaabta = [
+  { "magac": "Taleefan", "qiime": 500 },
+  { "magac": "Kombiyuutar", "qiime": 1000 },
+  { "magac": "Headphones", "qiime": 50 }
+];
+
+// Qabte mara taxane oo waca qabte kale
+qabte xisaabiyaWadartaAlaabta(alaabta, boqolkiibaCanshuurta) {
+  door wadarta = 0;
+  
+  ku (door alaab : alaabta) {
+    door natiijo = xisaabiyaWadarta(alaab.qiime, boqolkiibaCanshuurta);
+    wadarta = wadarta + natiijo.wadarta;
+    
+    daabac(alaab.magac + ": $" + natiijo.wadarta);
+  }
+  
+  celi wadarta;
+}
+
+door wadartaAlaabta = xisaabiyaWadartaAlaabta(alaabta, 15);
+daabac("Wadarta dhammaan alaabta: $" + wadartaAlaabta);
+```
+Natiijooyinka:
+```
+Qiimaha asalka: $100
+Canshuurta: $15
+Wadarta: $115
+Taleefan: $575
+Kombiyuutar: $1150
+Headphones: $57.5
+Wadarta dhammaan alaabta: $1782.5
+```

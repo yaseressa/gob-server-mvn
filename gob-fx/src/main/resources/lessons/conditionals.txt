@@ -1,0 +1,131 @@
+Xulashooyinka
+Barashada xulashooyinka iyo go'aan qaadashada ee luuqadda barnaamijyada Gob
+
+Xulashooyinka ee Gob
+Xulashooyinka waxay kuu ogolaadaan inaad go'aamo qaadato oo aad fuliso koodka ku xiran shuruudaha. Gob wuxuu bixiyaa dhowr qaab oo loo sameeyo xulashooyinka.
+
+kol iyo kale
+Qaabka ugu fudud ee xulashooyinka waa isticmaalka "kol" iyo "kale". "kol" wuxuu hubiyaa shuruud, haddii ay run tahay, wuxuu fuliyaa koodka ku jira. Haddii ay been tahay, wuxuu fuliyaa koodka ku jira "kale".
+```
+door da = 18;
+
+kol (da >= 18) {
+  daabac("Waa qaan-gaar");
+} kale {
+  daabac("Waa qaan-yar");
+}
+```
+Natiijooyinka:
+```
+Waa qaan-gaar
+```
+
+kol-kolkale-kale
+Haddii aad leedahay shuruudo badan, waxaad isticmaali kartaa "kolkale" si aad u hubiso shuruudo dheeraad ah.
+```
+door buundo = 85;
+
+kol (buundo >= 90) {
+  daabac("Darajada: A");
+} kolkale (buundo >= 80) {
+  daabac("Darajada: B");
+} kolkale (buundo >= 70) {
+  daabac("Darajada: C");
+} kolkale (buundo >= 60) {
+  daabac("Darajada: D");
+} kale {
+  daabac("Darajada: F");
+}
+```
+Natiijooyinka:
+```
+Darajada: B
+```
+
+Isbarbardhigga
+Gob wuxuu bixiyaa hawl-wadeenno kala duwan oo loogu talagalay isbarbardhigga qiimayaasha. Kuwaas waxaa ka mid ah:
+- == - Leeg (wuxuu hubiyaa in laba qiime ay isku mid yihiin)
+- != - Ma aha isku mid (wuxuu hubiyaa in laba qiime aysan isku mid ahayn)
+- > - Ka weyn
+- < - Ka yar
+- >= - Ka weyn ama leeg
+- <= - Ka yar ama leeg
+```
+door a = 5;
+door b = 10;
+
+daabac(a == b);  // been
+daabac(a != b);  // run
+daabac(a > b);   // been
+daabac(a < b);   // run
+daabac(a >= b);  // been
+daabac(a <= b);  // run
+```
+
+Hawl-wadeennada macquuleed
+Gob wuxuu bixiyaa hawl-wadeenno macquuleed si aad u isku darto shuruudaha. Kuwaas waxaa ka mid ah:
+- iyo - Macquul IYO (wuxuu hubiyaa in labada shuruud ay run yihiin)
+- ama - Macquul AMA (wuxuu hubiyaa in ugu yaraan hal shuruud ay run tahay)
+- ! - Macquul MAAHA (wuxuu beddelaa qiimaha macquulka)
+```
+door da = 25;
+door dakhli = 50000;
+
+kol (da > 18 iyo dakhli > 30000) {
+  daabac("Waxaad u qalantaa deynta");
+} kale {
+  daabac("Ma u qalantid deynta");
+}
+
+door waa_fasax = run;
+door waa_jiif = been;
+
+kol (waa_fasax ama waa_jiif) {
+  daabac("Waxaad nasanaysaa maanta");
+} kale {
+  daabac("Waa inaad shaqaysaa maanta");
+}
+
+kol (!waa_jiif) {
+  daabac("Ma jiifsanid");
+}
+```
+Natiijooyinka:
+```
+Waxaad u qalantaa deynta
+Waxaad nasanaysaa maanta
+Ma jiifsanid
+```
+
+Tusaale Dhamaystiran
+Halkan waxaa ku qoran tusaale dhamaystiran oo isticmaalaya xulashooyinka:
+```
+// Barnaamij hubiya in qof uu u qalmo inuu codsado baasaboor
+door da = 20;
+door muwaadin = run;
+door dambiile = been;
+
+kol (da >= 18 iyo muwaadin iyo !dambiile) {
+  daabac("Waxaad u qalantaa inaad codsato baasaboor");
+  
+  // Hubinta kharashka ku baxaya
+  kol (da < 25) {
+    daabac("Kharashka: $100");
+  } kolkale (da < 60) {
+    daabac("Kharashka: $150");
+  } kale {
+    daabac("Kharashka: $50 (Dadka waayeelka ah waxay helaan qiimo dhimis)");
+  }
+} kolkale (da < 18) {
+  daabac("Waa inaad jirtaa ugu yaraan 18 sano");
+} kolkale (!muwaadin) {
+  daabac("Waa inaad tahay muwaadin");
+} kale {
+  daabac("Ma u qalantid inaad codsato baasaboor");
+}
+```
+Natiijooyinka:
+```
+Waxaad u qalantaa inaad codsato baasaboor
+Kharashka: $100
+```

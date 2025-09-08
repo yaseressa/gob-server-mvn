@@ -1,0 +1,160 @@
+Wareegyada
+Barashada wareegyada iyo soo noqnoqoshada ee luuqadda barnaamijyada Gob
+
+Wareegyada ee Gob
+Wareegyada waxay kuu ogolaadaan inaad fuliso koodka mar ka badan. Gob wuxuu bixiyaa dhowr nooc oo wareegyo ah si aad u maamusho soo noqnoqoshada.
+
+Wareegga intay
+Wareegga "intay" wuxuu fuliyaa koodka inta shuruud ay run tahay. Waxaa inta badan loo isticmaalaa marka tirada wareegyada la yaqaano.
+```
+// Daabacidda nambarada 1 ilaa 5
+door i = 1;
+intay (i <= 5) {
+  daabacLn(i);
+  i = i + 1;
+}
+```
+Natiijooyinka:
+```
+1
+2
+3
+4
+5
+```
+
+Wareegga for
+Wareegga "for" waa qaab kooban oo loogu talagalay wareegyada. Wuxuu isku daraa saddex qayb: bilaabidda, shuruudda, iyo cusboonaysiinta.
+```
+// Daabacidda nambarada 1 ilaa 5 adoo isticmaalaya for
+for (door i = 1; i <= 5; i = i + 1) {
+  daabacLn(i);
+}
+```
+Natiijooyinka:
+```
+1
+2
+3
+4
+5
+```
+
+Wareegga taxanaha
+Wareegga "ku" wuxuu kuu ogolaadaa inaad marto taxane ama object. Wuxuu kuu fududeeyaa helitaanka qiimayaasha taxanaha.
+```
+// Daabacidda qiimayaasha taxanaha
+door magacyada = ["Ahmed", "Faadumo", "Cabdi", "Caasha"];
+ku (door magac : magacyada) {
+  daabacLn(magac);
+}
+```
+Natiijooyinka:
+```
+Ahmed
+Faadumo
+Cabdi
+Caasha
+```
+
+Joojinta iyo Sii wadidda
+Gob wuxuu bixiyaa laba eray oo muhiim ah oo loogu talagalay maaraynta wareegyada: "jooji" iyo "sii wad".
+- jooji - Wuxuu joojiyaa wareegga oo wuxuu u boodaa koodka ka dambeeya wareegga.
+- sii wad - Wuxuu joojiyaa wareegga hadda jira oo wuxuu bilaabaa wareegga xiga.
+```
+// Isticmaalka jooji
+for (door i = 1; i <= 10; i = i + 1) {
+  kol (i == 6) {
+    jooji;  // Jooji wareegga marka i == 6
+  }
+  daabacLn(i);
+}
+
+daabacLn("---");
+
+// Isticmaalka sii wad
+for (door i = 1; i <= 10; i = i + 1) {
+  kol (i % 2 == 0) {
+    sii wad;  // Ka bood nambarada dhaban
+  }
+  daabacLn(i);
+}
+```
+Natiijooyinka:
+```
+1
+2
+3
+4
+5
+---
+1
+3
+5
+7
+9
+```
+
+Wareegyada Is-dhex-galay
+Waxaad sidoo kale isticmaali kartaa wareegyo is-dhex-galay, halkaas oo wareeg uu ku jiro wareeg kale. Tani waxay u fiican tahay marka aad u baahan tahay inaad marto xog laba-jibaaran.
+```
+// Daabacidda jadwalka isku dhufashada 5x5
+for (door i = 1; i <= 5; i = i + 1) {
+  for (door j = 1; j <= 5; j = j + 1) {
+    daabacLn(i + " x " + j + " = " + (i * j));
+  }
+  daabacLn("---");
+}
+```
+
+Tusaale Dhamaystiran
+Halkan waxaa ku qoran tusaale dhamaystiran oo isticmaalaya wareegyada:
+```
+// Barnaamij xisaabiya tirada isku dar ee taxane
+door tiradooyinka = [10, 20, 30, 40, 50];
+door wadarta = 0;
+
+// Isticmaalka wareegga ku
+ku (door tiro : tiradooyinka) {
+  wadarta = wadarta + tiro;
+}
+
+daabacLn("Wadarta tiradooyinka: " + wadarta);
+
+// Raadinta tirada ugu weyn ee taxanaha
+door ugu_weyn = tiradooyinka[0];
+
+for (door i = 1; i < dherer(tiradooyinka); i = i + 1) {
+  kol (tiradooyinka[i] > ugu_weyn) {
+    ugu_weyn = tiradooyinka[i];
+  }
+}
+
+daabacLn("Tirada ugu weyn: " + ugu_weyn);
+
+// Daabacidda tiradooyinka dhaban ee u dhexeeya 1 iyo 20
+daabacLn("Tiradooyinka dhaban ee u dhexeeya 1 iyo 20:");
+door i = 1;
+intay (i <= 20) {
+  kol (i % 2 == 0) {
+    daabacLn(i);
+  }
+  i = i + 1;
+}
+```
+Natiijooyinka:
+```
+Wadarta tiradooyinka: 150
+Tirada ugu weyn: 50
+Tiradooyinka dhaban ee u dhexeeya 1 iyo 20:
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+```
