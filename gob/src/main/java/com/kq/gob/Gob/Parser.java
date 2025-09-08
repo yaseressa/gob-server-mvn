@@ -1,13 +1,13 @@
 package com.kq.gob.Gob;
 
+import static com.kq.gob.Gob.TokenType.*;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static com.kq.gob.Gob.TokenType.*;
-
 public class Parser {
-    public static class ParseError extends RuntimeException {}
+    private static class ParseError extends RuntimeException {}
     private final List<Token> tokens;
     private int current;
     public Parser(List<Token> tokens) {
@@ -27,25 +27,25 @@ public class Parser {
     private Expr assignment() {
 
         Expr expr = or();
-            if (match(EQUAL)) {
-                Token equals = previous();
-                Expr value = assignment();
-                if (expr instanceof Expr.Variable) {
-                    Token name = ((Expr.Variable) expr).name;
-                    return new Expr.Assign(name, value);
-                }else if (expr instanceof Expr.Get) {
-                    Expr.Get get = (Expr.Get)expr;
-                    return new Expr.Set(get.object, get.name, value);
-                }
-                else if (expr instanceof Expr.ListCall) {
-                    Expr.ListCall get = (Expr.ListCall)expr;
-                    return new Expr.ListUpdate(get.name, get.index, value);
-                }
-                else {
-                    error(equals, "Meelayn Aan La Oogalyn");
-                }
+        if (match(EQUAL)) {
+            Token equals = previous();
+            Expr value = assignment();
+            if (expr instanceof Expr.Variable) {
+                Token name = ((Expr.Variable) expr).name;
+                return new Expr.Assign(name, value);
+            }else if (expr instanceof Expr.Get) {
+                Expr.Get get = (Expr.Get)expr;
+                return new Expr.Set(get.object, get.name, value);
             }
-            return expr;
+            else if (expr instanceof Expr.ListCall) {
+                Expr.ListCall get = (Expr.ListCall)expr;
+                return new Expr.ListUpdate(get.name, get.index, value);
+            }
+            else {
+                error(equals, "Meelayn Aan La Oogalyn");
+            }
+        }
+        return expr;
     }
 
     private Expr or() {
@@ -76,7 +76,8 @@ public class Parser {
             return statement();
         } catch (ParseError error) {
             synchronize();
-            return null;    }
+            return null;
+        }
     }
 
     private Stmt varDeclaration() {
@@ -131,11 +132,11 @@ public class Parser {
     private Stmt printStatement() {
         Expr value ;
         if (match(LEFT_PAREN)) {
-                value = expression();
-                consume(RIGHT_PAREN, "La Filayey ')' tacbiir Kadib");
-            } else {
-                value = expression();
-            }
+            value = expression();
+            consume(RIGHT_PAREN, "La Filayey ')' tacbiir Kadib");
+        } else {
+            value = expression();
+        }
         consume(SEMICOLON, "La Filayey ';' Qiimo Kadib.");
         return new Stmt.Print(value);
     }
@@ -153,11 +154,11 @@ public class Parser {
     private Expr lengthStatement() {
         Expr value ;
         if (match(LEFT_PAREN)) {
-                value = expression();
-                consume(RIGHT_PAREN, "La Filayey ')' tacbiir Kadib");
-            } else {
-                value = expression();
-            }
+            value = expression();
+            consume(RIGHT_PAREN, "La Filayey ')' tacbiir Kadib");
+        } else {
+            value = expression();
+        }
         return new Expr.Length(value);
     }
     private Stmt expressionStatement() {
@@ -237,18 +238,18 @@ public class Parser {
     private Object method(String kind) {
         Token name = consume(IDENTIFIER, "La Filayey " + kind + " Magacii.");
         if(check(LEFT_PAREN)){
-        consume(LEFT_PAREN, "La Filayey '(' magaca " + kind + " kadib.");
-        List<Token> parameters = new ArrayList<>();
-        if (!check(RIGHT_PAREN)) {
-            do {
-                parameters.add(
-                        consume(IDENTIFIER, "La Filayey magaca halbeeg"));
-            } while (match(COMMA));
-        }
-        consume(RIGHT_PAREN, "La Filayey ')' halbeeg Kadib");
-        consume(LEFT_BRACE, "La Filayey '{' Kahor jidhka " + kind);
-        List<Stmt> body = block();
-        return new Stmt.Function(name, parameters, body);
+            consume(LEFT_PAREN, "La Filayey '(' magaca " + kind + " kadib.");
+            List<Token> parameters = new ArrayList<>();
+            if (!check(RIGHT_PAREN)) {
+                do {
+                    parameters.add(
+                            consume(IDENTIFIER, "La Filayey magaca halbeeg"));
+                } while (match(COMMA));
+            }
+            consume(RIGHT_PAREN, "La Filayey ')' halbeeg Kadib");
+            consume(LEFT_BRACE, "La Filayey '{' Kahor jidhka " + kind);
+            List<Stmt> body = block();
+            return new Stmt.Function(name, parameters, body);
         }else{
             Expr initializer = null;
             if (match(EQUAL)) {
@@ -268,7 +269,7 @@ public class Parser {
         consume(LEFT_BRACE, "La Filayey '(' magaca cayn kadib.");
         List<Object> methods = new ArrayList<>();
         while (!check(RIGHT_BRACE) && !isAtEnd()) {
-                methods.add(method("method"));
+            methods.add(method("method"));
 
         }
         consume(RIGHT_BRACE, "La Filayey '}' cayn dhamaadkii");
@@ -327,21 +328,9 @@ public class Parser {
         if (match(IDENTIFIER)) {
             var variable = previous();
             if(match(LEFT_SQUARE)){
-                Expr idx = null;
-                while(match(NUMBER)){
-                    idx = new Expr.Literal(Integer.parseInt(previous().literal.toString().split("[.]")[0]));
-
-                }
-                if(match(IDENTIFIER)){
-                    idx = new Expr.Variable(new Token(VAR,previous().lexeme.toString(), null, previous().line));
-
-                }
-                if(match(MINUS)){
-                    consume(MINUS, "godku negative manoqon karo [" + previous().lexeme.toString() + "]");
-                }
+                Expr idx = expression();
                 consume(RIGHT_SQUARE, "La Filayey ']' god Kadib");
                 return new Expr.ListCall(new Expr.Variable(variable), idx);
-
             }
             return new Expr.Variable(variable);
         }
@@ -464,12 +453,5 @@ public class Parser {
             }
         }
         return false;
-    }
-    @Override
-    public String toString() {
-        return "Parser{" +
-                "tokens=" + tokens +
-                ", current=" + current +
-                '}';
     }
 }

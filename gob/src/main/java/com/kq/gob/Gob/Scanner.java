@@ -88,8 +88,10 @@ public class Scanner {
         if (peek() == '.' && isDigit(peekNext())) {
             advance();
             while (isDigit(peek())) advance();
-        }
         addToken(NUMBER, Double.parseDouble(source.substring(start, current)));
+        return;
+        }
+        addToken(NUMBER, Integer.parseInt(source.substring(start, current)));
     }
     private boolean isAlphaNumeric(char c) { return isAlpha(c) || isDigit(c);}
     private void identifier() {

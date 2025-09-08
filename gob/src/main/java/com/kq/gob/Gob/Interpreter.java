@@ -1,13 +1,16 @@
 package com.kq.gob.Gob;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
-import java.util.*;
 
 import static com.kq.gob.Gob.TokenType.*;
-public class Interpreter implements Expr.Visitor<Object>, Stmt.Visitor<Object>{
+public class Interpreter implements Expr.Visitor<Object>, Stmt.Visitor<Void>{
     final Environment globals = new Environment();
     private Map<Expr, Integer> locals = new HashMap<>();
-    private LinkedList<String> interpreted = new LinkedList<>();
+    private String  interpreted = "";
     private Environment ENV = globals;
     public static Map<String, Object> objVars = new HashMap<>();
 
@@ -43,24 +46,23 @@ public class Interpreter implements Expr.Visitor<Object>, Stmt.Visitor<Object>{
             public String toString() { return "<native qabte>"; }
         });
     }
-    public Object interpret(List<Stmt> expression) {
+    public String interpret(List<Stmt> expression) {
         try {
+
             for (var expr: expression) {
                 execute(expr);
             }
-         if(!interpreted.isEmpty()){
-             String longString = "";
-             for (String s : interpreted) {
-                longString += s + " ";
-             }
-             interpreted.clear();
-             return longString;
-         }
+            if(!interpreted.isEmpty()){
+                var temporary = interpreted;
+                interpreted = "";
+                return temporary;
+            }
         } catch (RuntimeError error) {
             Gob.runtimeError(error);
         }
         return null;
     }
+
     void executeBlock(List<Stmt> statements,
                       Environment environment) {
         Environment previous = this.ENV;
@@ -178,7 +180,10 @@ public class Interpreter implements Expr.Visitor<Object>, Stmt.Visitor<Object>{
     }
     private String stringify(Object object) {
         if (object == null) return "ban";
-        if (object instanceof Double) {
+        if (object instanceof Number) {
+            if (object instanceof Integer) {
+                return object.toString();
+            }
             String text = object.toString();
             if (text.endsWith(".0")) {
                 text = text.substring(0, text.length() - 2);
@@ -295,19 +300,18 @@ public class Interpreter implements Expr.Visitor<Object>, Stmt.Visitor<Object>{
 
     @Override
     public Void visit(Stmt.PrintLN stmt) {
-        interpreted.add(stringify(evaluate(stmt.expression)) + "\n");
-        return null;
-    }
+        interpreted += stringify(evaluate(stmt.expression)) + "\n";
+        return null;    }
 
     @Override
     public Void visit(Stmt.Print stmt) {
-        interpreted.add(stringify(evaluate(stmt.expression)));
+        interpreted+=stringify(evaluate(stmt.expression));
         return null;
     }
 
     @Override
     public Object visit(Expr.Length expr) {
-    Object value = evaluate(expr.expression);
+        Object value = evaluate(expr.expression);
         if (value instanceof ArrayList) {
             return (double)(((ArrayList<?>) value).size());
         } else {
@@ -473,20 +477,20 @@ public class Interpreter implements Expr.Visitor<Object>, Stmt.Visitor<Object>{
         throw new RuntimeError(expr.name, "walaxdan hawlgalkan looma sameyn karo");
     }
 
-void doubleOperations(Expr.CompAssign expr, Object ogValue, Object value){
-    if(expr.operator.type == COMPOUND_PLUS) ENV.assign(expr.name, (Double)ogValue + (Double)value);
-    if(expr.operator.type == COMPOUND_MINUS) ENV.assign(expr.name, (Double)ogValue - (Double)value);
-    if(expr.operator.type == COMPOUND_SLASH) ENV.assign(expr.name, (Double)ogValue / (Double)value);
-    if(expr.operator.type == COMPOUND_STAR) ENV.assign(expr.name, (Double)ogValue * (Double)value);
-    if(expr.operator.type == COMPOUND_PERCENT) ENV.assign(expr.name, (Double)ogValue % (Double)value);
-}
-void integerOperations(Expr.CompAssign expr, Object ogValue, Object value){
-    if(expr.operator.type == COMPOUND_PLUS) ENV.assign(expr.name, (Integer)ogValue + (Integer)value);
-    if(expr.operator.type == COMPOUND_MINUS) ENV.assign(expr.name, (Integer)ogValue - (Integer)value);
-    if(expr.operator.type == COMPOUND_SLASH) ENV.assign(expr.name, (Integer)ogValue / (Integer)value);
-    if(expr.operator.type == COMPOUND_STAR) ENV.assign(expr.name, (Integer)ogValue * (Integer)value);
-    if(expr.operator.type == COMPOUND_PERCENT) ENV.assign(expr.name, (Integer)ogValue % (Integer)value);
-}
+    void doubleOperations(Expr.CompAssign expr, Object ogValue, Object value){
+        if(expr.operator.type == COMPOUND_PLUS) ENV.assign(expr.name, (Double)ogValue + (Double)value);
+        if(expr.operator.type == COMPOUND_MINUS) ENV.assign(expr.name, (Double)ogValue - (Double)value);
+        if(expr.operator.type == COMPOUND_SLASH) ENV.assign(expr.name, (Double)ogValue / (Double)value);
+        if(expr.operator.type == COMPOUND_STAR) ENV.assign(expr.name, (Double)ogValue * (Double)value);
+        if(expr.operator.type == COMPOUND_PERCENT) ENV.assign(expr.name, (Double)ogValue % (Double)value);
+    }
+    void integerOperations(Expr.CompAssign expr, Object ogValue, Object value){
+        if(expr.operator.type == COMPOUND_PLUS) ENV.assign(expr.name, (Integer)ogValue + (Integer)value);
+        if(expr.operator.type == COMPOUND_MINUS) ENV.assign(expr.name, (Integer)ogValue - (Integer)value);
+        if(expr.operator.type == COMPOUND_SLASH) ENV.assign(expr.name, (Integer)ogValue / (Integer)value);
+        if(expr.operator.type == COMPOUND_STAR) ENV.assign(expr.name, (Integer)ogValue * (Integer)value);
+        if(expr.operator.type == COMPOUND_PERCENT) ENV.assign(expr.name, (Integer)ogValue % (Integer)value);
+    }
 
     @Override
     public Object visit(Expr.Logical expr) {
@@ -501,7 +505,7 @@ void integerOperations(Expr.CompAssign expr, Object ogValue, Object value){
 
     @Override
     public Object visit(Expr.Set expr) {
-       Object  currentObject = evaluate(expr.object);
+        Object  currentObject = evaluate(expr.object);
         if (!(currentObject instanceof GobInstance)) {
             throw new RuntimeError(expr.name,
                     "Walxaha Ayuunbaa Lahan kara sifooyin.");

@@ -71,8 +71,7 @@ public class Gob {
         String res = "";
         try{
             resolver.resolve(statements);
-            res = (String) interpreter.
-                    interpret(statements);
+            res = (String) interpreter.interpret(statements);
         }catch(Exception e){
             if(errors.isEmpty()){
             errors.add(e.getMessage());}
