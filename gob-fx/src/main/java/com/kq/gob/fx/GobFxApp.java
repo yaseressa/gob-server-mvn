@@ -15,12 +15,7 @@ import javafx.stage.Stage;
  * The application allows entering source code and executing it
  * by calling the core {@link Gob#run(String)} interpreter.
  *
- * Run the UI with the JavaFX Maven plugin:
- *     mvn -pl gob-fx javafx:run
- *
- * Package the application into a native executable with:
- *     mvn -pl gob-fx javafx:jpackage
-*/
+**/
 public class GobFxApp extends Application {
 
     @Override

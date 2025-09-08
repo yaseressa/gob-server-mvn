@@ -18,7 +18,7 @@
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <javafx.version>21.0.2</javafx.version>
-        <!-- Detect platform to pull in the correct JavaFX natives -->
+
         <javafx.platform>${javafx.platform}</javafx.platform>
     </properties>
 
@@ -33,6 +33,7 @@
             <artifactId>javafx-controls</artifactId>
             <version>${javafx.version}</version>
             <classifier>${javafx.platform}</classifier>
+
         </dependency>
     </dependencies>
 
@@ -44,8 +45,9 @@
                 <version>0.0.8</version>
                 <configuration>
                     <mainClass>com.kq.gob.fx.GobFxApp</mainClass>
-                    <!-- configure a launcher name so jpackage creates an executable -->
+
                     <launcher>gob-fx</launcher>
+
                 </configuration>
             </plugin>
         </plugins>
