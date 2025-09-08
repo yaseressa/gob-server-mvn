@@ -1,0 +1,115 @@
+Barnaamijyada Ku Salaysan Walxaha
+Barashada caynanka iyo dhaxalka ee luuqadda barnaamijyada Gob
+
+Barnaamijyada Ku Salaysan Walxaha ee Gob
+Gob wuxuu bixiyaa taageero xooggan oo loogu talagalay barnaamijyada ku salaysan walxaha (object-oriented programming), oo ay ku jiraan caynanka, dhaxalka, iyo abuurista shayada.
+
+Qeexidda Caynka Aasaasiga ah: Dad
+Caynka Dad wuxuu matalaa qof leh magac (magac) iyo da (da). Caynkan wuxuu leeyahay habab dhisay (constructor) oo bilaabaya astaamahan.
+```
+cayn Dad {
+    qabte Dad(magac, da) {
+        kan.magac = magac;
+        kan.da = da;
+    }
+}
+```
+Qaybaha:
+- Magaca Caynka: Dad
+- Dhisaha: qabte Dad(magac, da)
+- Bilaabiyaa astaamaha magac (name) iyo da (age).
+- Wuxuu isticmaalaa kan si uu ugu yeero tusaalaha hadda jira.
+
+Qeexidda Caynka Laga Soo Dheegtay: Somali
+Caynka Somali wuxuu ka dhaxlaa Dad wuxuuna ku daraa astaamo dheeraad ah oo ah qabiil (qabiil). Dhisaha Somali wuxuu bilaabaa astaamihiisa wuxuuna u yeeraa dhisaha caynka aasaasiga ah si uu u bilaabo astaamaha laga dhaxlay.
+```
+cayn Somali dhaxal Dad {
+    qabte Somali(magac, da, qabiil) {
+        ab.Dad(magac, da);
+        kan.qabiil = qabiil;
+    }
+}
+```
+Qaybaha:
+- Magaca Caynka: Somali
+- Dhaxalka: dhaxal Dad
+- Wuxuu ka dhaxlaa caynka Dad.
+- Dhisaha: qabte Somali(magac, da, qabiil)
+- U yeeraa dhisaha caynka aasaasiga ah ab.Dad(magac, da).
+- Bilaabiyaa astaanta qabiil (clan).
+
+Abuurista Shayada
+Si loo abuuro tusaale caynka Somali, isticmaal ereyga door oo bixi qiyamka loo baahan yahay ee dhisaha.
+```
+door Ahmed = Somali("Ahmed", 25, "ISSAC");
+```
+- Magaca Tusaalaha: Ahmed
+- Caynka: Somali
+- Qiyamka Dhisaha:
+  - "Ahmed" (Magac)
+  - 25 (Da)
+  - "ISSAC" (Qabiil)
+
+Helidda Guryaha
+Si aad u hesho oo u daabacdo guryaha tusaalaha la abuuray, isticmaal shaqada daabac. Halkan, waxaan daabacnaa astaanta qabiil ee tusaalaha Ahmed.
+```
+daabac(Ahmed.qabiil);
+```
+
+Tusaale Koodhka Oo Dhamaystiran
+Halkan waxaa ah koodhka oo dhamaystiran oo qeexaya caynanka, abuuraya tusaale, iyo helidda astaamaha.
+```
+cayn Dad {
+    qabte Dad(magac, da) {
+        kan.magac = magac;
+        kan.da = da;
+    }
+}
+
+cayn Somali dhaxal Dad {
+    qabte Somali(magac, da, qabiil) {
+        ab.Dad(magac, da);
+        kan.qabiil = qabiil;
+    }
+}
+
+door Ahmed = Somali("Ahmed", 25, "ISSAC");
+daabac(Ahmed.qabiil);
+```
+Natiijada:
+```
+ISSAC
+```
+
+Dhismayaasha Dheeraadka ah
+Waxaan sidoo kale ku dari karnaa qabte dheeraad ah caynka si aan u bixino hab-dhaqan dheeraad ah:
+```
+cayn Dad {
+    qabte Dad(magac, da) {
+        kan.magac = magac;
+        kan.da = da;
+    }
+    
+    qabte faahfaahin() {
+        celi "Magaca: " + kan.magac + ", Da: " + kan.da;
+    }
+}
+
+cayn Somali dhaxal Dad {
+    qabte Somali(magac, da, qabiil) {
+        ab.Dad(magac, da);
+        kan.qabiil = qabiil;
+    }
+    
+    qabte faahfaahin() {
+        celi ab.faahfaahin() + ", Qabiil: " + kan.qabiil;
+    }
+}
+
+door Ahmed = Somali("Ahmed", 25, "ISSAC");
+daabac(Ahmed.faahfaahin());
+```
+Natiijada:
+```
+Magaca: Ahmed, Da: 25, Qabiil: ISSAC
+```

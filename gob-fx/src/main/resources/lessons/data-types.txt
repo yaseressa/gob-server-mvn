@@ -1,0 +1,115 @@
+Noocyada Xogta
+Barashada noocyada kala duwan ee xogta ee luuqadda barnaamijyada Gob
+
+Noocyada Xogta ee Gob
+Gob wuxuu taageeraa noocyo xog oo aasaasiya kuswaas oo kala ah:
+
+Nambaro
+Qiimayaal tirooyinka aan kala qaybsamaynin iyo kuwa kala qaybsamaynin.
+```
+door number = 123;
+door pi = 3.14;
+```
+
+Qoraalo
+Qoraal ku qoran labo ' kaliya ama labo " dhaxdood.
+```
+door greeting = "Hello, World!";
+```
+
+Booleans
+Qiimayaal run (true) ama been (false) ah.
+```
+door truth = run;
+door lie = been;
+```
+
+Ban
+Maqnaanshaha qiime
+```
+door banaan = ban;
+```
+
+Taxane
+Liis ay ku jiraan qiimayaal kala duwan
+```
+door taxane = [1, 2, 3, 4, 5];
+```
+
+Isticmaalka Doorsoomayaasha
+Doorsoomayaasha waxaa lagu diiwangaliyaa adoo isticmaalaya erayga "door". Waxayna hayn karaan nooc kasta oo xog ah.
+```
+door x = 5;
+door y = "hello";
+door z = run;
+door w = [1, 2, 3];
+```
+
+Hawl-wadeennada
+Gob wuxuu leeyahay hawlwadeeno kala duwan oo loogu talagalay xisaabinta, isbarbardhigga, iyo hawlgallada macquulka ah:
+
+Hawl-wadeennada Xisaabinta
+- + - isku dar
+- - - kala jar
+- * - isku dhufasho
+- / - isku qaybin
+- % - Modulus
+```
+door result = 3 + 2; // 5
+```
+
+Hawl-wadeennada isku-dhafka ah
+- += - Wuxuu ku daraa doorsomaha gacanta midig qiimaha gacanta bidix yaala.
+- -= - Wuxuu ka jaraa doorsomaha gacanta midig qiimaha gacanta bidix yaala.
+- *= - Wuxuu ku dhuftaa doorsomaha gacanta midig qiimaha gacanta bidix yaala.
+- /= - Wuxuu u qaybiyaa doorsomaha gacanta midig qiimaha gacanta bidix yaala.
+- %= - Wuxuu xisaabiyaa modules-ka oo ku meeleeyaa hawlgalka gacanta bidix ee gacanta midig.
+
+Isbarbardhigga Hawl-wadeenada
+- > - ka weyn
+- < - ka yar
+- >= - ka weyn ama leeg
+- <= - ka yar ama leeg
+- == - leeg
+- != - isku mid ma aha
+```
+door isGreater = 5 > 3; // run
+```
+
+Hawl-wadeennada macquuleed
+- iyo - macquul IYO
+- ama - macquul AMA
+- ! - macquul MAAHA
+```
+door result = run iyo been; // been
+```
+
+Tusaale Dhamaystiran
+Halkan waxaa ku qoran tusaale dhamaystiran oo isticmaalaya noocyada xogta kala duwan:
+```
+// Nambaro
+door a = 5;
+door b = 3.14;
+door isugeyn = a + b;
+daabac("Isugeynta: " + isugeyn);
+
+// Qoraalo
+door magac = "Ahmed";
+door salaan = "Soo dhawoow " + magac;
+daabac(salaan);
+
+// Booleans
+door waa_maalin = run;
+door waa_habeen = been;
+
+kol (waa_maalin) {
+  daabac("Waa maalin");
+} kale {
+  daabac("Waa habeen");
+}
+
+// Taxane
+door tiradooyinka = [10, 20, 30, 40, 50];
+daabac("Tirada koowaad: " + tiradooyinka[0]);
+daabac("Tirada saddexaad: " + tiradooyinka[2]);
+```

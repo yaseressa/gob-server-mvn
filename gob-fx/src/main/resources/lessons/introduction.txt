@@ -1,0 +1,50 @@
+Hordhaca Luuqadda
+Barashada aasaaska luuqadda barnaamijyada Gob
+
+Soo dhaweynta luuqadda
+Ku soo dhawoow luuqadda barnaamijyada Gob! Luuqaddan waxay u fududeysaa dadka Soomaalida ah inay bartaan barnaamij sameynta iyagoo isticmaalaya luuqadooda hooyo. Luuqadda waxay taageeraa paradigms badan oo kala duwan, oo ay ku jiraan barnaamijyada functional iyo object-oriented.
+
+Rakibaadda iyo qalabaynta
+Si aad u bilowdo isticmaalka luuqadda barnaamijyada Gob, waxaad u baahan tahay inaad rakibto qalabka soo socda:
+
+- Interpreter-ka luuqadda Gob
+- Text editor ama IDE
+
+Laakiin maanta, waxaad si toos ah uga isticmaali kartaa goobta tijaabinta ee website-ka, taas oo aan u baahnayn wax rakibaad ah.
+
+Qorista barnaamijkaaga ugu horeeya
+Aan qorno barnaamijkeena ugu horeeya ee luuqadda Gob. Barnaamijka caadiga ah ee "Hello World" wuxuu u ekaanayaa sidan:
+
+```
+// Barnaamijka ugu horeeya
+daabac("Soo dhawoow Adduunka!");
+
+// Waxaad sidoo kale qori kartaa faallooyin badan
+// si aad u sharaxdo koodkaaga
+
+// Waxaan sidoo kale isticmaali karnaa doorsoomayaasha
+door magac = "Soomaali";
+daabac("Soo dhawoow " + magac + "!");
+```
+
+Marka aad fuliso koodkan, waxaad arki doontaa natiijooyinka soo socda:
+
+```
+Soo dhawoow Adduunka!
+Soo dhawoow Soomaali!
+```
+
+Aasaaska Naxwaha
+Luuqadda barnaamijyada Gob waxay leedahay naxwe fudud oo la fahmi karo:
+
+- Faallooyinka: Waxay ku bilaabmaan "//" oo waxay ku dhammaadaan dhammaadka xariiqda.
+- Doorsoomayaasha: Waxaad isticmaali kartaa "door" si aad u qeexdo doorsoomayaasha.
+- Noocyada Xogta: Nambaro, qoraalo, booleans (run/been), ban, iyo taxane.
+- Qorista: Isticmaal "daabac()" si aad u daabacdo qoraalka.
+- Xulashooyinka: Isticmaal "kol", "kolkale", iyo "kale" si aad u sameyso xulashooyinka.
+- Wareegyada: Isticmaal "intay" iyo "wareeg" si aad u sameyso wareegyada.
+
+Tallaabada Xigta
+Casharkan waxaan ku baranay aasaaska luuqadda barnaamijyada Gob. Casharka xiga, waxaan baran doonnaa noocyada kala duwan ee xogta ee luuqadda.
+
+Waxaad sidoo kale isticmaali kartaa goobta tijaabinta si aad u tijaabiso tusaalooyinka koodka ee aan ku aragnay casharkan.
